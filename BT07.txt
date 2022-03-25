@@ -78,5 +78,51 @@ int main(){
     cout<<endl;
     binarySearch(array,key);
 }
+5:
+#include<iostream>
+#include<cstring>
+using namespace std;
+char* weird_string(){
+    char c[]="123345";
+    return c;
+}
+int main(){
+    weird_string();
+}
+7(bug):
+#include<iostream>
+#include<cstring>
+using namespace std;
+const char* str2 = "Hello apple, orange, orange car, orange chair";
+const char* str1 = "orange";
+int main(){
+    int count=0;
+    int s=strlen(str2);
+    for(int i=1;i<=s;i++){
+        if(str2[i]=='o'){
+            
+            }
+        }
+    }
+    cout<<count;
+
+
+}
+BT08(Đảo xâu):
+#include<iostream>
+#include<cstring>
+using namespace std;
+const char* a="orange";
+
+void reverse(const char a[]){
+    char b[strlen(a)];
+    strcpy(b,a);
+    for(int i=5;i>=0;i--){
+        cout<<b[i];
+    }
+}
+int main(){
+    reverse(a);
+}
 
 
