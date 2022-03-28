@@ -34,6 +34,7 @@ int main(){
     count_even(mang,size);
 }
 
+
 mảng động VD:
 #include<iostream>
 using namespace std;
