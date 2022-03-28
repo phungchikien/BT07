@@ -124,5 +124,95 @@ void reverse(const char a[]){
 int main(){
     reverse(a);
 }
+Bt08:delete_char
+#include<iostream>
+#include<utility>
+#include<cstring>
+using namespace std;
+const char* a="I love code";
+int strlenn(const char a[]){
+    int i=0;
+    int count=0;
+    while('a[i]'>=65&&'a[i]'<=90||'a[i]'>=97&&'a[i]'<=12){
+        count++;
+        i++;
+    }
+    return count;
+}
+
+void delete_char(const char a[],char c){
+    char *p=new char[strlen(a)];
+    for(int i = 0;i<strlen(a);i++){
+        if(a[i]== c){
+            p[i]='.';
+        }else if(a[i]!=c){
+            p[i]=a[i];
+        }
+    }
+    for(int i=0;i<strlen(a);i++){
+        if(p[i]!='.')
+        cout<<p[i];
+    }
+}
+int main()  {
+    char b;
+    cin>>b;
+    delete_char(a,b);
+}
+BT08:
+A1:
+#include<iostream>
+using namespace std;
+void f(int xval)
+{
+   int x;
+   x = xval;
+   // in địa chỉ của x tại đây
+   int* p1=&x;
+   cout<<p1;
+}
+void g(int yval)
+{
+   int y;
+   // in địa chỉ của y tại đây
+   y=yval;
+   int* p=&y;
+   cout<<p;
+}
+int main()
+{
+   f(7);
+   cout<<endl;
+   g(11);
+   return 0;
+}
+Note: Có địa chỉ giống nhau.
+A3:#include<iostream>
+#include<utility>
+using namespace std;
+void swap_pointers(const char*& x,const char*& y)
+{
+
+   const char *tmp =x;
+   x = y;
+   y = tmp;
+}
+int main()
+{
+   const char a[] = "I should print second";
+   const char b[] = "I should print first";
+
+   const char *s1 = a;
+   const char *s2 = b;
+   swap_pointers(s1,s2);
+   cout << "s1 is " << s1 << endl;
+   cout << "s2 is " << s2 << endl;
+   return 0;
+}
+
+Note: Có thể dùng thư viện <utility> hàm swap
+- Hàm swap được const char và char.
+- Hàm chỉ swap 2 biến char có cùng độ dài nếu không dùng con trỏ và có thể swap nếu dùng con trỏ
+
 
 
